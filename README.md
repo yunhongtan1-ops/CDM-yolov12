@@ -30,14 +30,27 @@ yaml
 
 ---
 
-## Dataset
+Dataset
 
-Experiments are conducted on the publicly available **iSOOD dataset**.
-The original dataset can be downloaded from:
+Experiments are conducted on two datasets:
 
-- https://zenodo.org/records/10903574
+1. iSOOD (Public)
 
-The dataset itself is **not included** in this repository.
+The publicly available iSOOD dataset is used for benchmarking.
+It can be downloaded from:
+
+https://zenodo.org/records/10903574
+
+This dataset is not included in this repository.
+
+2. FSOOD (Private)
+
+We also evaluate our method on an additional FSOOD dataset, which is a private dataset collected under specific conditions.
+
+Due to privacy and data protection policies, this dataset cannot be publicly released.
+However, experimental results on FSOOD are reported in the paper for completeness.
+
+Researchers interested in this dataset may contact the authors for further discussion.
 
 ---
 
