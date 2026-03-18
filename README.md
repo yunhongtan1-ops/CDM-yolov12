@@ -54,9 +54,5 @@ Researchers interested in this dataset may contact the authors for further discu
 
 ---
 
-## Small-Object Subset
-
-A small-object subset is constructed by retaining images that contain at least
-one instance whose bounding-box area ratio is smaller than **0.5%**.
 
 
