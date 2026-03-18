@@ -1,0 +1,16 @@
+path: /root/autodl-tmp/datasets/iSOOD_10481_v1.0_split 
+train: images/train
+val: images/val
+test: images/test # 如果有 test 数据集可补上
+
+names:
+  0: sewage_outfall
+  # 1: stormwater
+  # 2: industrial_wastewater
+  # 3: agricultural_drainage
+  # 4: livestock
+  # 5: aquaculture
+  # 6: surface_runoff
+  # 7: wastewater_treatment
+  # 8: domestic_sewage
+  # 9: others

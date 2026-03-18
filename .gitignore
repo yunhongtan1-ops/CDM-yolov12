@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# model / weights
+*.pt
+*.pth
+*.onnx
+
+# build / install files
+*.whl
+*.egg-info/
+build/
+dist/
+
+# logs
+*.log
+
+# system
+.DS_Store
+Thumbs.db
