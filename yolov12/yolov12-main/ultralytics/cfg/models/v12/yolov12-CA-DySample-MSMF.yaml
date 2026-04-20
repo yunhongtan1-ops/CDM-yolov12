@@ -1,6 +1,3 @@
-# YOLOv12 🚀, AGPL-3.0 license
-# YOLOv12 object detection model with P3-P5 outputs. For Usage examples see https://docs.ultralytics.com/tasks/detect
-
 # Parameters
 nc: 1 # number of classes
 scales: # model compound scaling constants, i.e. 'model=yolov12n.yaml' will call yolov12.yaml with scale 'n'
@@ -39,7 +36,7 @@ head:
   - [[-1, 9], 1, Concat, [1]]              # [20] cat([19],[9]) → (1536,32x32)  ← 修正：接 [9]=P5-CA
   - [-1, 2, C3k2, [1024, True]]            # [21] ★Head-P5 (1024,32x32)
 
-  # ===== 在 Detect 前做 GGAFusion（二次融合同尺度） =====
+  # ===== 在 Detect 前做MSMF（二次融合同尺度） =====
   - [[4, 15], 1, MSMF, []]            # [22] P3:  backbone P3=[4]   + head P3=[15] → (256,128x128)
   - [[6, 18], 1, MSMF, []]            # [23] P4:  backbone P4=[6]   + head P4=[18] → (512,64x64)
 
