@@ -1,0 +1,10 @@
+# FSOOD dataset configuration.
+# Replace the path below with the local path to the FSOOD dataset after access is approved.
+
+path: /path/to/FSOOD
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: sewage_outfall

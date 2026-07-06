@@ -1,0 +1,10 @@
+# iSOOD small-object subset configuration.
+# Replace the path below with the local path to the generated iSOOD small-object subset.
+
+path: /path/to/iSOOD_10481_v1.0_small_split
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: sewage_outfall

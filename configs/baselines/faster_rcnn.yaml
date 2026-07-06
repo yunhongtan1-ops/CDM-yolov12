@@ -1,0 +1,33 @@
+# Baseline recipe for Faster R-CNN.
+# TorchVision provides Faster R-CNN through a Python API rather than an official model YAML.
+# Reference implementation: torchvision.models.detection.fasterrcnn_resnet50_fpn
+# Docs: https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.detection.fasterrcnn_resnet50_fpn.html
+
+model:
+  name: faster_rcnn
+  implementation: torchvision.models.detection.fasterrcnn_resnet50_fpn
+  detector_type: two_stage
+  backbone: resnet50_fpn
+  feature_pyramid: true
+  roi_heads: standard_faster_rcnn
+
+task:
+  type: object_detection
+  dataset_class_count: 1
+  num_classes_with_background: 2
+
+input:
+  image_size: 640
+  color_format: RGB
+
+training:
+  recipe: official_default
+  task_specific_retuning: false
+  data_splits: same_as_main_experiments
+  evaluation_metrics: same_as_main_experiments
+  checkpoint_selection: best_validation_checkpoint
+
+notes:
+  - The official TorchVision implementation is retained as the Faster R-CNN baseline.
+  - This file records the baseline recipe used for reproducibility in this repository.
+  - Dataset paths and runtime arguments should be supplied by the corresponding training script.
